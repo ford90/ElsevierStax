@@ -1,0 +1,2545 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+
+<article    docsubtype="fla"  >
+   <item-info>
+      <jid>INS</jid>
+      <aid>10573</aid>
+      <pii>S0020-0255(14)00162-5</pii>
+      <doi>10.1016/j.ins.2014.02.056</doi>
+      <copyright type="full-transfer" year="2014">Elsevier Inc.</copyright>
+   </item-info>
+   <head>
+      <title id="tm005">Testing the performance of teaching-learning based optimization (TLBO) algorithm on combinatorial problems: Flow shop and job shop scheduling cases</title>
+      <author-group id="ag005">
+         <author id="au005">
+            <given-name>Adil</given-name>
+            <surname>Baykaso$#287;lu</surname>
+            <cross-ref refid="af005" id="c0005">
+               <sup loc="post">a</sup>
+            </cross-ref>
+            <cross-ref refid="cor1" id="c0010">
+               <sup loc="post">$#42;</sup>
+            </cross-ref>
+            <e-address type="email" id="em005">adil.baykasoglu@deu.edu.tr</e-address>
+         </author>
+         <author id="au010">
+            <given-name>Alper</given-name>
+            <surname>Hamzadayi</surname>
+            <cross-ref refid="af005" id="c0015">
+               <sup loc="post">a</sup>
+            </cross-ref>
+         </author>
+         <author id="au015">
+            <given-name>Simge Yelkenci</given-name>
+            <surname>K$#246;se</surname>
+            <cross-ref refid="af005" id="c0020">
+               <sup loc="post">a</sup>
+            </cross-ref>
+            <cross-ref refid="af015" id="c0025">
+               <sup loc="post">b</sup>
+            </cross-ref>
+         </author>
+         <affiliation id="af005">
+            <label>a</label>
+            <textfn>Dokuz Eyl$#252;l University, Faculty of Engineering, Department of Industrial Engineering, Buca, $#304;zmir, Turkey</textfn>
+            <affiliation >
+               <organization>Dokuz Eyl$#252;l University</organization>
+               <organization>Faculty of Engineering</organization>
+               <organization>Department of Industrial Engineering</organization>
+               <address-line>Buca</address-line>
+               <city>$#304;zmir</city>
+               <country>Turkey</country>
+            </affiliation>
+         </affiliation>
+         <affiliation id="af015">
+            <label>b</label>
+            <textfn>Ministry of Science, Industry and Technology, Directorate General for Safety and Inspection of Industrial Products, Cankaya, Ankara, Turkey</textfn>
+            <affiliation >
+               <organization>Ministry of Science, Industry and Technology</organization>
+               <organization>Directorate General for Safety and Inspection of Industrial Products</organization>
+               <address-line>Cankaya</address-line>
+               <city>Ankara</city>
+               <country>Turkey</country>
+            </affiliation>
+         </affiliation>
+         <correspondence id="cor1">
+            <label>$#42;</label>
+            <text>Corresponding author. Tel.: +90 232 3017600; fax: +90 232 3017608.</text>
+         </correspondence>
+      </author-group>
+      <date-received day="17" month="3" year="2012"/>
+      <date-revised day="23" month="1" year="2014"/>
+      <date-accepted day="9" month="2" year="2014"/>
+      <abstract class="author"  id="ab005" view="all">
+         <section-title id="st090">Abstract</section-title>
+         <abstract-sec id="as005" view="all">
+            <simple-para id="sp0005" view="all">Teaching-learning based optimization (TLBO) algorithm has been recently proposed in the literature as a novel population oriented meta-heuristic algorithm. It has been tested on some unconstrained and constrained non-linear programming problems, including some design optimization problems with considerable success. The main purpose of this paper is to analyze the performance of TLBO algorithm on combinatorial optimization problems first time in the literature. We also provided a detailed literature review about TLBO's applications. The performance of the TLBO algorithm is tested on some combinatorial optimization problems, namely flow shop (FSSP) and job shop scheduling problems (JSSP). It is a well-known fact that scheduling problems are amongst the most complicated combinatorial optimization problems. Therefore, performance of TLBO algorithm on these problems can give an idea about its possible performance for solving other combinatorial optimization problems. We also provided a comprehensive comparative study along with statistical analyses in order to present effectiveness of TLBO algorithm on solving scheduling problems. Experimental results show that the TLBO algorithm has a considerable potential when compared to the best-known heuristic algorithms for scheduling problems.</simple-para>
+         </abstract-sec>
+      </abstract>
+      <keywords class="keyword" id="kg005" view="all">
+         <section-title id="st095">Keywords</section-title>
+         <keyword id="k0005">
+            <text>Teaching-learning based optimization</text>
+         </keyword>
+         <keyword id="k0010">
+            <text>Flow shop scheduling</text>
+         </keyword>
+         <keyword id="k0015">
+            <text>Job shop scheduling</text>
+         </keyword>
+         <keyword id="k0020">
+            <text>Makespan</text>
+         </keyword>
+         <keyword id="k0025">
+            <text>Meta-heuristic</text>
+         </keyword>
+         <keyword id="k0030">
+            <text>Combinatorial optimization</text>
+         </keyword>
+      </keywords>
+   </head>
+   <tail view="all">
+      <bibliography id="bi0005" view="all">
+         <section-title id="st100">References</section-title>
+         <bibliography-sec id="bs0005" view="all">
+            <bib-reference id="b0005">
+               <label>1]</label>
+               <reference id="h0005">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>J.</given-name>
+                           <surname>Adams</surname>
+                        </author>
+                        <author>
+                           <given-name>E.</given-name>
+                           <surname>Balas</surname>
+                        </author>
+                        <author>
+                           <given-name>D.</given-name>
+                           <surname>Zawack</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>The shifting bottleneck procedure for job-shop scheduling</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Manage. Sci.</maintitle>
+                           </title>
+                           <volume-nr>34</volume-nr>
+                        </series>
+                        <issue-nr>3</issue-nr>
+                        <date>1988</date>
+                     </issue>
+                     <pages>
+                        <first-page>391</first-page>
+                        <last-page>401</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0010">
+               <label>2]</label>
+               <reference id="h0010">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>B.</given-name>
+                           <surname>Amiri</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Application of teaching-learning-based optimization algorithm on cluster analysis</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>J. Basic Appl. Sci. Res.</maintitle>
+                           </title>
+                           <volume-nr>2</volume-nr>
+                        </series>
+                        <issue-nr>11</issue-nr>
+                        <date>2012</date>
+                     </issue>
+                     <pages>
+                        <first-page>11795</first-page>
+                        <last-page>11802</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0015">
+               <label>3]</label>
+               <reference id="h0015">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>C.</given-name>
+                           <surname>Anandaraman</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>An improved sheep flock heredity algorithm for job shop scheduling and flow shop scheduling problems</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Int. J. Indust. Eng. Comput.</maintitle>
+                           </title>
+                           <volume-nr>2</volume-nr>
+                        </series>
+                        <date>2011</date>
+                     </issue>
+                     <pages>
+                        <first-page>749</first-page>
+                        <last-page>764</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0020">
+               <label>4]</label>
+               <reference id="h0020">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>K.R.</given-name>
+                           <surname>Baker</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Introduction to Sequencing and Scheduling</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <book>
+                        <date>1974</date>
+                        <publisher>
+                           <name>Wiley</name>
+                           <location>New York</location>
+                        </publisher>
+                     </book>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0025">
+               <label>5]</label>
+               <reference id="h0025">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>A.</given-name>
+                           <surname>Baykaso$#287;lu</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Linguistic based meta-heuristic optimisation model for flexible job shop scheduling</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Int. J. Prod. Res.</maintitle>
+                           </title>
+                           <volume-nr>40</volume-nr>
+                        </series>
+                        <issue-nr>17</issue-nr>
+                        <date>2002</date>
+                     </issue>
+                     <pages>
+                        <first-page>4523</first-page>
+                        <last-page>4543</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0030">
+               <label>6]</label>
+               <reference id="h0030">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>J.E.</given-name>
+                           <surname>Beasley</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Or-library: distributing test problems by electronic mail</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>J. Oper. Res. Soc.</maintitle>
+                           </title>
+                           <volume-nr>14</volume-nr>
+                        </series>
+                        <date>1990</date>
+                     </issue>
+                     <pages>
+                        <first-page>1069</first-page>
+                        <last-page>1072</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0035">
+               <label>7]</label>
+               <reference id="h0035">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>C.</given-name>
+                           <surname>Bierwirth</surname>
+                        </author>
+                        <author>
+                           <given-name>D.C.</given-name>
+                           <surname>Mattfeld</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Production scheduling and rescheduling with genetic algorithms</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Evol. Comput.</maintitle>
+                           </title>
+                           <volume-nr>7</volume-nr>
+                        </series>
+                        <issue-nr>1</issue-nr>
+                        <date>1999</date>
+                     </issue>
+                     <pages>
+                        <first-page>1</first-page>
+                        <last-page>17</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0040">
+               <label>8]</label>
+               <reference id="h0040">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>S.</given-name>
+                           <surname>Binato</surname>
+                        </author>
+                        <author>
+                           <given-name>W.J.</given-name>
+                           <surname>Hery</surname>
+                        </author>
+                        <author>
+                           <given-name>D.M.</given-name>
+                           <surname>Loewenstern</surname>
+                        </author>
+                        <author>
+                           <given-name>M.G.C.</given-name>
+                           <surname>Resende</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A GRASP for job shop scheduling</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Essays Surv. Metaheuristics</maintitle>
+                           </title>
+                           <volume-nr>15</volume-nr>
+                        </series>
+                        <date>2002</date>
+                     </issue>
+                     <pages>
+                        <first-page>59</first-page>
+                        <last-page>79</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0045">
+               <label>9]</label>
+               <reference id="h0045">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>S.A.</given-name>
+                           <surname>Brah</surname>
+                        </author>
+                        <author>
+                           <given-name>J.L.</given-name>
+                           <surname>Hunsucker</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Branch and bound algorithm for the flow shop with multiple processors</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Eur. J. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>51</volume-nr>
+                        </series>
+                        <date>1991</date>
+                     </issue>
+                     <pages>
+                        <first-page>88</first-page>
+                        <last-page>99</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0050">
+               <label>10]</label>
+               <reference id="h0050">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>P.</given-name>
+                           <surname>Brucker</surname>
+                        </author>
+                        <author>
+                           <given-name>B.</given-name>
+                           <surname>Jurisch</surname>
+                        </author>
+                        <author>
+                           <given-name>B.</given-name>
+                           <surname>Sievers</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A branch and bound algorithm for the job-shop scheduling problem</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Discrete Appl. Math.</maintitle>
+                           </title>
+                           <volume-nr>49</volume-nr>
+                        </series>
+                        <date>1994</date>
+                     </issue>
+                     <pages>
+                        <first-page>109</first-page>
+                        <last-page>127</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0055">
+               <label>11]</label>
+               <reference id="h0055">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>H.G.</given-name>
+                           <surname>Campbell</surname>
+                        </author>
+                        <author>
+                           <given-name>R.A.</given-name>
+                           <surname>Dudek</surname>
+                        </author>
+                        <author>
+                           <given-name>M.L.</given-name>
+                           <surname>Smith</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A heuristic algorithm for the n job m-machine sequencing problem</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Manage. Sci.</maintitle>
+                           </title>
+                           <volume-nr>16</volume-nr>
+                        </series>
+                        <date>1970</date>
+                     </issue>
+                     <pages>
+                        <first-page>630</first-page>
+                        <last-page>637</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0060">
+               <label>12]</label>
+               <reference id="h0060">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>M.</given-name>
+                           <surname>Crepin$#353;ek</surname>
+                        </author>
+                        <author>
+                           <given-name>S.-H.</given-name>
+                           <surname>Liu</surname>
+                        </author>
+                        <author>
+                           <given-name>L.</given-name>
+                           <surname>Mernik</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A note on teaching-learning-based optimization algorithm</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Inform. Sci.</maintitle>
+                           </title>
+                           <volume-nr>212</volume-nr>
+                        </series>
+                        <date>2012</date>
+                     </issue>
+                     <pages>
+                        <first-page>79</first-page>
+                        <last-page>93</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0065">
+               <label>13]</label>
+               <reference id="h0065">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>S.</given-name>
+                           <surname>Dey</surname>
+                        </author>
+                        <author>
+                           <given-name>D.</given-name>
+                           <surname>Sarkar</surname>
+                        </author>
+                        <author>
+                           <given-name>A.</given-name>
+                           <surname>Basu</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A tag machine based performance evaluation method for job-shop schedules</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>IEEE Trans. Comput. Aided Des. Integr. Circuits Syst.</maintitle>
+                           </title>
+                           <volume-nr>29</volume-nr>
+                        </series>
+                        <issue-nr>7</issue-nr>
+                        <date>2010</date>
+                     </issue>
+                     <pages>
+                        <first-page>1028</first-page>
+                        <last-page>1041</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0070">
+               <label>14]</label>
+               <reference id="h0070">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.A.</given-name>
+                           <surname>Dudek</surname>
+                        </author>
+                        <author>
+                           <given-name>S.S.</given-name>
+                           <surname>Panwalkar</surname>
+                        </author>
+                        <author>
+                           <given-name>M.L.</given-name>
+                           <surname>Smith</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>The lessons of flowshop scheduling research</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>40</volume-nr>
+                        </series>
+                        <issue-nr>1</issue-nr>
+                        <date>1992</date>
+                     </issue>
+                     <pages>
+                        <first-page>7</first-page>
+                        <last-page>13</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0365">
+               <label>15]</label>
+               <other-ref id="h0365">
+                  <textref>K. Fan, R-q. Zhang, An analysis of research in job shop scheduling problem (2000-2009), in: Y. Li, W. Desheng (Eds.), Proceedings 2010 IEEE International Conference on Advanced Management Science (ICAMS), Chengdu, 2010, pp. 282-288.</textref>
+               </other-ref>
+            </bib-reference>
+            <bib-reference id="b0080">
+               <label>16]</label>
+               <reference id="h0080">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>H.</given-name>
+                           <surname>Fisher</surname>
+                        </author>
+                        <author>
+                           <given-name>G.L.</given-name>
+                           <surname>Thompson</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Probabilistic Learning Combinations of Local Job Shop Scheduling Rules</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <book>
+                        <date>1963</date>
+                        <publisher>
+                           <name>Prentice-Hall</name>
+                           <location>Englewood Cliffs, NJ</location>
+                        </publisher>
+                     </book>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0085">
+               <label>17]</label>
+               <reference id="h0085">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>S.</given-name>
+                           <surname>French</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Sequencing and Scheduling: An Introduction to the Mathematics of the Job Shop</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <book>
+                        <date>1982</date>
+                        <publisher>
+                           <name>E. Horwood</name>
+                           <location>Chichester, West Sussex</location>
+                        </publisher>
+                     </book>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0090">
+               <label>18]</label>
+               <reference id="h0090">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>L.</given-name>
+                           <surname>Gao</surname>
+                        </author>
+                        <author>
+                           <given-name>G.</given-name>
+                           <surname>Zhang</surname>
+                        </author>
+                        <author>
+                           <given-name>L.</given-name>
+                           <surname>Zhang</surname>
+                        </author>
+                        <author>
+                           <given-name>X.</given-name>
+                           <surname>Li</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>An efficient memetic algorithm for solving the job shop scheduling problem</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Comput. Indust. Eng.</maintitle>
+                           </title>
+                           <volume-nr>60</volume-nr>
+                        </series>
+                        <date>2011</date>
+                     </issue>
+                     <pages>
+                        <first-page>699</first-page>
+                        <last-page>705</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0095">
+               <label>19]</label>
+               <reference id="h0095">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>M.</given-name>
+                           <surname>Garey</surname>
+                        </author>
+                        <author>
+                           <given-name>D.</given-name>
+                           <surname>Johnson</surname>
+                        </author>
+                        <author>
+                           <given-name>R.</given-name>
+                           <surname>Sethi</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>The complexity of flowshop and jobshop scheduling</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Math. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>1</volume-nr>
+                        </series>
+                        <date>1976</date>
+                     </issue>
+                     <pages>
+                        <first-page>117</first-page>
+                        <last-page>129</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0100">
+               <label>20]</label>
+               <reference id="h0100">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>H.W.</given-name>
+                           <surname>Ge</surname>
+                        </author>
+                        <author>
+                           <given-name>L.</given-name>
+                           <surname>Sun</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>An effective PSO and AIS-based hybrid intelligent algorithm for job-shop scheduling</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>IEEE Trans. Syst. Man Cybern. Part A Syst. Hum.</maintitle>
+                           </title>
+                           <volume-nr>8</volume-nr>
+                        </series>
+                        <issue-nr>2</issue-nr>
+                        <date>2008</date>
+                     </issue>
+                     <pages>
+                        <first-page>358</first-page>
+                        <last-page>368</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0105">
+               <label>21]</label>
+               <reference id="h0105">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>B.</given-name>
+                           <surname>Giffler</surname>
+                        </author>
+                        <author>
+                           <given-name>G.L.</given-name>
+                           <surname>Thompson</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Algorithms for solving production scheduling problems</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>8</volume-nr>
+                        </series>
+                        <date>1960</date>
+                     </issue>
+                     <pages>
+                        <first-page>487</first-page>
+                        <last-page>503</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0110">
+               <label>22]</label>
+               <reference id="h0110">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>J.F.</given-name>
+                           <surname>Goncalves</surname>
+                        </author>
+                        <author>
+                           <given-name>J.J.D.M.</given-name>
+                           <surname>Mendes</surname>
+                        </author>
+                        <author>
+                           <given-name>M.G.C.</given-name>
+                           <surname>Resende</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A hybrid genetic algorithm for the job shop scheduling problem</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Eur. J. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>167</volume-nr>
+                        </series>
+                        <date>2005</date>
+                     </issue>
+                     <pages>
+                        <first-page>77</first-page>
+                        <last-page>95</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0115">
+               <label>23]</label>
+               <reference id="h0115">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>S.M.K.</given-name>
+                           <surname>Hasan</surname>
+                        </author>
+                        <author>
+                           <given-name>R.</given-name>
+                           <surname>Sarker</surname>
+                        </author>
+                        <author>
+                           <given-name>D.</given-name>
+                           <surname>Essam</surname>
+                        </author>
+                        <author>
+                           <given-name>D.</given-name>
+                           <surname>Cornforth</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Memetic algorithm for solving job-shop scheduling problems</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Memetic Comput.</maintitle>
+                           </title>
+                           <volume-nr>1</volume-nr>
+                        </series>
+                        <date>2009</date>
+                     </issue>
+                     <pages>
+                        <first-page>69</first-page>
+                        <last-page>83</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0120">
+               <label>24]</label>
+               <reference id="h0120">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>S.R.</given-name>
+                           <surname>Hejazi</surname>
+                        </author>
+                        <author>
+                           <given-name>S.</given-name>
+                           <surname>Saghafian</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Flowshop-scheduling problems with makespan criterion: a review</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Int. J. Prod. Res.</maintitle>
+                           </title>
+                           <volume-nr>43</volume-nr>
+                        </series>
+                        <issue-nr>14</issue-nr>
+                        <date>2005</date>
+                     </issue>
+                     <pages>
+                        <first-page>2895</first-page>
+                        <last-page>2929</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0125">
+               <label>25]</label>
+               <reference id="h0125">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>N.</given-name>
+                           <surname>Hooda</surname>
+                        </author>
+                        <author>
+                           <given-name>A.K.</given-name>
+                           <surname>Dhingra</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Flow shop scheduling using simulated annealing: a review</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Int. J. Appl. Eng. Res., Dindigul</maintitle>
+                           </title>
+                           <volume-nr>2</volume-nr>
+                        </series>
+                        <issue-nr>1</issue-nr>
+                        <date>2011</date>
+                     </issue>
+                     <pages>
+                        <first-page>234</first-page>
+                        <last-page>249</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0370">
+               <label>26]</label>
+               <other-ref id="h0370">
+                  <textref>H. Hosseinpour, T. Niknam, S.I. Taher, A modified TLBO algorithm for placement of AVRs considering DGs, in: 26th International Power System Conference, Tehran, Iran, 2011, pp. 1-8.</textref>
+               </other-ref>
+            </bib-reference>
+            <bib-reference id="b0135">
+               <label>27]</label>
+               <reference id="h0135">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>A.</given-name>
+                           <surname>Jain</surname>
+                        </author>
+                        <author>
+                           <given-name>S.</given-name>
+                           <surname>Meeran</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Deterministic job-shop scheduling: past, present and future</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Eur. J. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>113</volume-nr>
+                        </series>
+                        <date>1999</date>
+                     </issue>
+                     <pages>
+                        <first-page>390</first-page>
+                        <last-page>434</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0140">
+               <label>28]</label>
+               <reference id="h0140">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>S.M.</given-name>
+                           <surname>Johnson</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Optimal two- and three-stage production schedules with setup times included</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Naval Res. Logis. Quart.</maintitle>
+                           </title>
+                           <volume-nr>1</volume-nr>
+                        </series>
+                        <date>1954</date>
+                     </issue>
+                     <pages>
+                        <first-page>61</first-page>
+                        <last-page>68</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0375">
+               <label>29]</label>
+               <other-ref id="h0375">
+                  <textref>K.R. Krishnanand, B.K. Panigrahi, P.K. Rout, A. Mohapatra, Application of multi-objective teaching-learning-based algorithm to an economic load dispatch problem with incommensurable objectives, in: Swarm, Evolutionary, and Memetic Computing Lecture Notes in Computer Science, vol. 7076, 2011, pp. 697-705.</textref>
+               </other-ref>
+            </bib-reference>
+            <bib-reference id="b0150">
+               <label>30]</label>
+               <reference id="h0150">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>I.</given-name>
+                           <surname>Kuo</surname>
+                        </author>
+                        <author>
+                           <given-name>S.</given-name>
+                           <surname>Horng</surname>
+                        </author>
+                        <author>
+                           <given-name>T.</given-name>
+                           <surname>Kao</surname>
+                        </author>
+                        <author>
+                           <given-name>T.</given-name>
+                           <surname>Lin</surname>
+                        </author>
+                        <author>
+                           <given-name>C.</given-name>
+                           <surname>Lee</surname>
+                        </author>
+                        <author>
+                           <given-name>T.</given-name>
+                           <surname>Terano</surname>
+                        </author>
+                        <author>
+                           <given-name>Y.</given-name>
+                           <surname>Pan</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>An efficient flow-shop scheduling algorithm based on a hybrid particle swarm optimization model</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Expert Syst. Appl.</maintitle>
+                           </title>
+                           <volume-nr>36</volume-nr>
+                        </series>
+                        <date>2009</date>
+                     </issue>
+                     <pages>
+                        <first-page>7027</first-page>
+                        <last-page>7032</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0155">
+               <label>31]</label>
+               <reference id="h0155">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>S.</given-name>
+                           <surname>Lawrence</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>An experimental investigation of heuristic scheduling techniques</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <edited-book>
+                        <title>
+                           <maintitle>Supplement to Resource Constrained Project Scheduling, GSIA</maintitle>
+                        </title>
+                        <date>1984</date>
+                        <publisher>
+                           <name>Carnegie Mellon University</name>
+                           <location>Pittsburgh, PA</location>
+                        </publisher>
+                     </edited-book>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0160">
+               <label>32]</label>
+               <reference id="h0160">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>Z.</given-name>
+                           <surname>Lian</surname>
+                        </author>
+                        <author>
+                           <given-name>X.</given-name>
+                           <surname>Gu</surname>
+                        </author>
+                        <author>
+                           <given-name>B.</given-name>
+                           <surname>Jiao</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A novel particle swarm optimization algorithm for permutation flow-shop scheduling to minimize makespan</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Chaos Solitons Fractals</maintitle>
+                           </title>
+                           <volume-nr>35</volume-nr>
+                        </series>
+                        <date>2008</date>
+                     </issue>
+                     <pages>
+                        <first-page>851</first-page>
+                        <last-page>861</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0165">
+               <label>33]</label>
+               <reference id="h0165">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>D.C.</given-name>
+                           <surname>Montgomery</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Design and Analysis of Experiments</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <book>
+                        <date>2000</date>
+                        <publisher>
+                           <name>John Wiley and Sons</name>
+                           <location>New York</location>
+                        </publisher>
+                     </book>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0170">
+               <label>34]</label>
+               <reference id="h0170">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>A.</given-name>
+                           <surname>Naik</surname>
+                        </author>
+                        <author>
+                           <given-name>S.C.</given-name>
+                           <surname>Satapathy</surname>
+                        </author>
+                        <author>
+                           <given-name>K.</given-name>
+                           <surname>Parvathi</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Improvement of initial cluster center of c-means using teaching learning based optimization</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Proc. Technol.</maintitle>
+                           </title>
+                           <volume-nr>6</volume-nr>
+                        </series>
+                        <date>2012</date>
+                     </issue>
+                     <pages>
+                        <first-page>428</first-page>
+                        <last-page>435</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0380">
+               <label>35]</label>
+               <other-ref id="h0380">
+                  <textref>N. Nayak, S.K. Routray, P.K. Rout, A function based fuzzy controller for VSC-HVDC system to enhance transient stability of AC/DC power system, in: Swarm, Evolutionary, and Memetic Computing Lecture Notes in Computer Science, vol. 7076, 2011, pp. 441-451.</textref>
+               </other-ref>
+            </bib-reference>
+            <bib-reference id="b0180">
+               <label>36]</label>
+               <reference id="h0180">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>M.</given-name>
+                           <surname>Nawaz</surname>
+                        </author>
+                        <author>
+                           <given-name>E.E.</given-name>
+                           <surname>Enscore</surname>
+                        </author>
+                        <author>
+                           <given-name>I.</given-name>
+                           <surname>Ham</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A heuristic algorithm for the m-machine, n-job flow-shop sequencing problem</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>OMEGA</maintitle>
+                           </title>
+                           <volume-nr>11</volume-nr>
+                        </series>
+                        <date>1983</date>
+                     </issue>
+                     <pages>
+                        <first-page>91</first-page>
+                        <last-page>95</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0185">
+               <label>37]</label>
+               <reference id="h0185">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>T.</given-name>
+                           <surname>Niknam</surname>
+                        </author>
+                        <author>
+                           <given-name>F.</given-name>
+                           <surname>Golestaneh</surname>
+                        </author>
+                        <author>
+                           <given-name>M.S.</given-name>
+                           <surname>Sadeghi</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Î˜-multiobjective teaching-learning-based optimization for dynamic economic emission dispatch</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>IEEE Syst. J.</maintitle>
+                           </title>
+                           <volume-nr>99</volume-nr>
+                        </series>
+                        <date>2012</date>
+                     </issue>
+                     <pages>
+                        <first-page>1</first-page>
+                        <last-page>12</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0190">
+               <label>38]</label>
+               <reference id="h0190">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>F.A.</given-name>
+                           <surname>Ogbu</surname>
+                        </author>
+                        <author>
+                           <given-name>D.K.</given-name>
+                           <surname>Smith</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>The application of the simulated annealing algorithm to the solution of the n/m/Cmax flow shop problem</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Comput. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>17</volume-nr>
+                        </series>
+                        <date>1990</date>
+                     </issue>
+                     <pages>
+                        <first-page>243</first-page>
+                        <last-page>253</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0195">
+               <label>39]</label>
+               <reference id="h0195">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>G.</given-name>
+                           <surname>Onwubolu</surname>
+                        </author>
+                        <author>
+                           <given-name>D.</given-name>
+                           <surname>Davendra</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Scheduling flow shops using differential evolution algorithm</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Eur. J. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>171</volume-nr>
+                        </series>
+                        <date>2006</date>
+                     </issue>
+                     <pages>
+                        <first-page>674</first-page>
+                        <last-page>692</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0200">
+               <label>40]</label>
+               <reference id="h0200">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>D.S.</given-name>
+                           <surname>Palmer</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Sequencing jobs through a multi-stage process in the minimum total time - a quick method of obtaining a near optimum</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Oper. Res. Quart.</maintitle>
+                           </title>
+                           <volume-nr>16</volume-nr>
+                        </series>
+                        <date>1965</date>
+                     </issue>
+                     <pages>
+                        <first-page>101</first-page>
+                        <last-page>107</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0205">
+               <label>41]</label>
+               <reference id="h0205">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>Q.</given-name>
+                           <surname>Pan</surname>
+                        </author>
+                        <author>
+                           <given-name>M.F.</given-name>
+                           <surname>Tasgetiren</surname>
+                        </author>
+                        <author>
+                           <given-name>P.N.</given-name>
+                           <surname>Suganthan</surname>
+                        </author>
+                        <author>
+                           <given-name>T.J.</given-name>
+                           <surname>Chua</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A discrete artificial bee colony algorithm for the lot-streaming flow shop scheduling problem</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Inform. Sci.</maintitle>
+                           </title>
+                           <volume-nr>181</volume-nr>
+                        </series>
+                        <date>2011</date>
+                     </issue>
+                     <pages>
+                        <first-page>2455</first-page>
+                        <last-page>2468</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0210">
+               <label>42]</label>
+               <reference id="h0210">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>Q.</given-name>
+                           <surname>Pan</surname>
+                        </author>
+                        <author>
+                           <given-name>L.</given-name>
+                           <surname>Wangb</surname>
+                        </author>
+                        <author>
+                           <given-name>L.</given-name>
+                           <surname>Gao</surname>
+                        </author>
+                        <author>
+                           <given-name>W.D.</given-name>
+                           <surname>Li</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>An effective hybrid discrete differential evolution algorithm for the flow shop scheduling with intermediate buffers</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Inform. Sci.</maintitle>
+                           </title>
+                           <volume-nr>181</volume-nr>
+                        </series>
+                        <date>2011</date>
+                     </issue>
+                     <pages>
+                        <first-page>668</first-page>
+                        <last-page>685</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0215">
+               <label>43]</label>
+               <reference id="h0215">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>B.J.</given-name>
+                           <surname>Park</surname>
+                        </author>
+                        <author>
+                           <given-name>H.R.</given-name>
+                           <surname>Choi</surname>
+                        </author>
+                        <author>
+                           <given-name>H.S.</given-name>
+                           <surname>Kim</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A hybrid genetic algorithm for the job shop scheduling problems</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Comput. Indust. Eng.</maintitle>
+                           </title>
+                           <volume-nr>45</volume-nr>
+                        </series>
+                        <issue-nr>4</issue-nr>
+                        <date>2003</date>
+                     </issue>
+                     <pages>
+                        <first-page>597</first-page>
+                        <last-page>613</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0220">
+               <label>44]</label>
+               <reference id="h0220">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>C.N.</given-name>
+                           <surname>Potts</surname>
+                        </author>
+                        <author>
+                           <given-name>V.A.</given-name>
+                           <surname>Strusevich</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Fifty years of scheduling: a survey of milestones</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>J. Oper. Res. Soc.</maintitle>
+                           </title>
+                           <volume-nr>60</volume-nr>
+                        </series>
+                        <date>2009</date>
+                     </issue>
+                     <pages>
+                        <first-page>S41</first-page>
+                        <last-page>S68</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0225">
+               <label>45]</label>
+               <reference id="h0225">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.</given-name>
+                           <surname>Qing-dao-er-ji</surname>
+                        </author>
+                        <author>
+                           <given-name>Y.</given-name>
+                           <surname>Wang</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A new hybrid genetic algorithm for job shop scheduling problem</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Comput. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>39</volume-nr>
+                        </series>
+                        <date>2012</date>
+                     </issue>
+                     <pages>
+                        <first-page>2291</first-page>
+                        <last-page>2299</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0230">
+               <label>46]</label>
+               <reference id="h0230">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.V.</given-name>
+                           <surname>Rao</surname>
+                        </author>
+                        <author>
+                           <given-name>D.P.</given-name>
+                           <surname>Vakharia</surname>
+                        </author>
+                        <author>
+                           <given-name>V.J.</given-name>
+                           <surname>Savsani</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Teaching-learning-based optimization: a novel method for constrained mechanical design optimization problems</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Comput. Aided Des.</maintitle>
+                           </title>
+                           <volume-nr>43</volume-nr>
+                        </series>
+                        <date>2011</date>
+                     </issue>
+                     <pages>
+                        <first-page>303</first-page>
+                        <last-page>315</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0385">
+               <label>47]</label>
+               <other-ref id="h0385">
+                  <textref>R.V. Rao, V.D. Kalyankar, Parameters optimization of advanced machining processes using TLBO algorithm, in: International Conference on Engineering, Project, and Production Management, Singapore, 2011b, pp. 21-32.</textref>
+               </other-ref>
+            </bib-reference>
+            <bib-reference id="b0240">
+               <label>48]</label>
+               <reference id="h0240">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.V.</given-name>
+                           <surname>Rao</surname>
+                        </author>
+                        <author>
+                           <given-name>V.</given-name>
+                           <surname>Patel</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Thermodynamic optimization of plate-fin heat exchanger using teaching-learning-based optimization (TLBO) algorithm</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Int. J. Adv. Therm. Sci. Eng.</maintitle>
+                           </title>
+                           <volume-nr>2</volume-nr>
+                        </series>
+                        <date>2011</date>
+                     </issue>
+                     <pages>
+                        <first-page>91</first-page>
+                        <last-page>96</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0245">
+               <label>49]</label>
+               <reference id="h0245">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.V.</given-name>
+                           <surname>Rao</surname>
+                        </author>
+                        <author>
+                           <given-name>V.J.</given-name>
+                           <surname>Savsani</surname>
+                        </author>
+                        <author>
+                           <given-name>D.P.</given-name>
+                           <surname>Vakharia</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Teaching-learning-based optimization: an optimization method for continuous non-linear large scale problems</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Inform. Sci.</maintitle>
+                           </title>
+                           <volume-nr>183</volume-nr>
+                        </series>
+                        <date>2012</date>
+                     </issue>
+                     <pages>
+                        <first-page>1</first-page>
+                        <last-page>15</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0250">
+               <label>50]</label>
+               <reference id="h0250">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.V.</given-name>
+                           <surname>Rao</surname>
+                        </author>
+                        <author>
+                           <given-name>V.</given-name>
+                           <surname>Patel</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Multi-objective optimization of combined Brayton and inverse Brayton cycles using advanced optimization algorithms</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Eng. Optim.</maintitle>
+                           </title>
+                           <volume-nr>44</volume-nr>
+                        </series>
+                        <date>2012</date>
+                     </issue>
+                     <pages>
+                        <first-page>965</first-page>
+                        <last-page>983</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0255">
+               <label>51]</label>
+               <reference id="h0255">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.V.</given-name>
+                           <surname>Rao</surname>
+                        </author>
+                        <author>
+                           <given-name>V.J.</given-name>
+                           <surname>Savsani</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Mechanical Design Optimization using Advanced Optimization Techniques</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <book>
+                        <date>2012</date>
+                        <publisher>
+                           <name>Springer Series in Advanced Manufacturing</name>
+                        </publisher>
+                     </book>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0260">
+               <label>52]</label>
+               <reference id="h0260">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.V.</given-name>
+                           <surname>Rao</surname>
+                        </author>
+                        <author>
+                           <given-name>V.</given-name>
+                           <surname>Patel</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>An elitist teaching-learning-based optimization algorithm for solving complex constrained optimization problems</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Int. J. Indust. Eng. Comput.</maintitle>
+                           </title>
+                           <volume-nr>3</volume-nr>
+                        </series>
+                        <date>2012</date>
+                     </issue>
+                     <pages>
+                        <first-page>535</first-page>
+                        <last-page>560</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0265">
+               <label>53]</label>
+               <reference id="h0265">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.V.</given-name>
+                           <surname>Rao</surname>
+                        </author>
+                        <author>
+                           <given-name>V.D.</given-name>
+                           <surname>Kalyankar</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Parameter optimization of modern machining processes using teaching-learning-based optimization algorithm</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Eng. Appl. Artif. Intell.</maintitle>
+                           </title>
+                           <volume-nr>26</volume-nr>
+                        </series>
+                        <date>2013</date>
+                     </issue>
+                     <pages>
+                        <first-page>524</first-page>
+                        <last-page>531</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0270">
+               <label>54]</label>
+               <reference id="h0270">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.V.</given-name>
+                           <surname>Rao</surname>
+                        </author>
+                        <author>
+                           <given-name>V.</given-name>
+                           <surname>Patel</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Multi-objective optimization of two stage thermoelectric cooler using a modified teaching-learning-based optimization algorithm</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Eng. Appl. Artif. Intell.</maintitle>
+                           </title>
+                           <volume-nr>26</volume-nr>
+                        </series>
+                        <date>2013</date>
+                     </issue>
+                     <pages>
+                        <first-page>430</first-page>
+                        <last-page>445</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0275">
+               <label>55]</label>
+               <reference id="h0275">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.V.</given-name>
+                           <surname>Rao</surname>
+                        </author>
+                        <author>
+                           <given-name>V.</given-name>
+                           <surname>Patel</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Multi-objective optimization of heat exchangers using a modified teaching-learning-based optimization algorithm</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Appl. Math. Model.</maintitle>
+                           </title>
+                           <volume-nr>37</volume-nr>
+                        </series>
+                        <date>2013</date>
+                     </issue>
+                     <pages>
+                        <first-page>1147</first-page>
+                        <last-page>1162</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0280">
+               <label>56]</label>
+               <reference id="h0280">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>C.R.</given-name>
+                           <surname>Reeves</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A genetic algorithm for flowshop sequencing</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Comput. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>22</volume-nr>
+                        </series>
+                        <date>1995</date>
+                     </issue>
+                     <pages>
+                        <first-page>5</first-page>
+                        <last-page>13</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0285">
+               <label>57]</label>
+               <reference id="h0285">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>C.</given-name>
+                           <surname>Rego</surname>
+                        </author>
+                        <author>
+                           <given-name>R.</given-name>
+                           <surname>Duarte</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A filter-and-fan approach to the job shop scheduling problem</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Eur. J. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>194</volume-nr>
+                        </series>
+                        <date>2009</date>
+                     </issue>
+                     <pages>
+                        <first-page>650</first-page>
+                        <last-page>662</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0290">
+               <label>58]</label>
+               <reference id="h0290">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>A.</given-name>
+                           <surname>Reisman</surname>
+                        </author>
+                        <author>
+                           <given-name>A.</given-name>
+                           <surname>Kumar</surname>
+                        </author>
+                        <author>
+                           <given-name>J.</given-name>
+                           <surname>Motwani</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Flowshop scheduling/sequencing research: a statistical review of the literature, 1952-1994</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>IEEE Trans. Eng. Manage.</maintitle>
+                           </title>
+                           <volume-nr>44</volume-nr>
+                        </series>
+                        <issue-nr>3</issue-nr>
+                        <date>1994</date>
+                     </issue>
+                     <pages>
+                        <first-page>316</first-page>
+                        <last-page>329</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0295">
+               <label>59]</label>
+               <reference id="h0295">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>I.</given-name>
+                           <surname>Ribas</surname>
+                        </author>
+                        <author>
+                           <given-name>R.</given-name>
+                           <surname>Companys</surname>
+                        </author>
+                        <author>
+                           <given-name>X.</given-name>
+                           <surname>Tort-Martorell</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>An iterated greedy algorithm for the flowshop scheduling problem with blocking</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Omega</maintitle>
+                           </title>
+                           <volume-nr>39</volume-nr>
+                        </series>
+                        <date>2011</date>
+                     </issue>
+                     <pages>
+                        <first-page>293</first-page>
+                        <last-page>301</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0300">
+               <label>60]</label>
+               <reference id="h0300">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.</given-name>
+                           <surname>Ruiz</surname>
+                        </author>
+                        <author>
+                           <given-name>C.</given-name>
+                           <surname>Maroto</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A comprehensive review and evaluation of permutation flowshop heuristics</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Eur. J. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>165</volume-nr>
+                        </series>
+                        <date>2005</date>
+                     </issue>
+                     <pages>
+                        <first-page>479</first-page>
+                        <last-page>494</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0305">
+               <label>61]</label>
+               <reference id="h0305">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>I.</given-name>
+                           <surname>Sabuncuoglu</surname>
+                        </author>
+                        <author>
+                           <given-name>M.</given-name>
+                           <surname>Bayiz</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Job shop scheduling with beam search</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Eur. J. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>118</volume-nr>
+                        </series>
+                        <issue-nr>2</issue-nr>
+                        <date>1999</date>
+                     </issue>
+                     <pages>
+                        <first-page>390</first-page>
+                        <last-page>412</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0390">
+               <label>62]</label>
+               <other-ref id="h0390">
+                  <textref>S.C. Satapathy, A. Naik, Data clustering based on teaching-learning-based optimization, in: Swarm, Evolutionary, and Memetic Computing Lecture Notes in Computer Science, vol. 7077, 2011, pp. 148-156.</textref>
+               </other-ref>
+            </bib-reference>
+            <bib-reference id="b0315">
+               <label>63]</label>
+               <reference id="h0315">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>D.Y.</given-name>
+                           <surname>Sha</surname>
+                        </author>
+                        <author>
+                           <given-name>C.</given-name>
+                           <surname>Hsu</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A hybrid particle swarm optimization for job shop scheduling problem</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Comput. Indust. Eng.</maintitle>
+                           </title>
+                           <volume-nr>51</volume-nr>
+                        </series>
+                        <date>2006</date>
+                     </issue>
+                     <pages>
+                        <first-page>791</first-page>
+                        <last-page>808</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0320">
+               <label>64]</label>
+               <reference id="h0320">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>A.I.</given-name>
+                           <surname>S$#246;nmez</surname>
+                        </author>
+                        <author>
+                           <given-name>A.</given-name>
+                           <surname>Baykaso$#287;lu</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A new dynamic programming formulation of (<italic>n</italic>
+                           <hsp sp="0.25"/>*<hsp sp="0.25"/>
+                           <italic>m</italic>) flowshop sequencing problems with due dates</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Int. J. Prod. Res.</maintitle>
+                           </title>
+                           <volume-nr>36</volume-nr>
+                        </series>
+                        <date>1998</date>
+                     </issue>
+                     <pages>
+                        <first-page>2269</first-page>
+                        <last-page>2283</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0325">
+               <label>65]</label>
+               <reference id="h0325">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>E.</given-name>
+                           <surname>Taillard</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Some efficient heuristic methods for the flow shop scheduling problem</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Eur. J. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>47</volume-nr>
+                        </series>
+                        <date>1990</date>
+                     </issue>
+                     <pages>
+                        <first-page>65</first-page>
+                        <last-page>74</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0330">
+               <label>66]</label>
+               <reference id="h0330">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>V.</given-name>
+                           <surname>Togan</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Design of planar steel frames using teaching-learning based optimization</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Eng. Struct.</maintitle>
+                           </title>
+                           <volume-nr>34</volume-nr>
+                        </series>
+                        <date>2012</date>
+                     </issue>
+                     <pages>
+                        <first-page>225</first-page>
+                        <last-page>232</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0335">
+               <label>67]</label>
+               <reference id="h0335">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>R.</given-name>
+                           <surname>Vaessens</surname>
+                        </author>
+                        <author>
+                           <given-name>E.</given-name>
+                           <surname>Aarts</surname>
+                        </author>
+                        <author>
+                           <given-name>J.</given-name>
+                           <surname>Lenstra</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Job shop scheduling by local search</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>INFORMS J. Comput.</maintitle>
+                           </title>
+                           <volume-nr>8</volume-nr>
+                        </series>
+                        <date>1996</date>
+                     </issue>
+                     <pages>
+                        <first-page>302</first-page>
+                        <last-page>317</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0340">
+               <label>68]</label>
+               <reference id="h0340">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>J.</given-name>
+                           <surname>Yang</surname>
+                        </author>
+                        <author>
+                           <given-name>L.</given-name>
+                           <surname>Sun</surname>
+                        </author>
+                        <author>
+                           <given-name>H.P.</given-name>
+                           <surname>Lee</surname>
+                        </author>
+                        <author>
+                           <given-name>Y.</given-name>
+                           <surname>Qian</surname>
+                        </author>
+                        <author>
+                           <given-name>Y.</given-name>
+                           <surname>Liang</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Clonal selection based memetic algorithm for job shop scheduling problems</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>J. Bionic Eng.</maintitle>
+                           </title>
+                           <volume-nr>5</volume-nr>
+                        </series>
+                        <date>2008</date>
+                     </issue>
+                     <pages>
+                        <first-page>111</first-page>
+                        <last-page>119</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0345">
+               <label>69]</label>
+               <reference id="h0345">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>G.</given-name>
+                           <surname>Yen</surname>
+                        </author>
+                        <author>
+                           <given-name>B.</given-name>
+                           <surname>Ivers</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Job shop scheduling optimization through multiple independent particle swarms</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Int. J. Intell. Comput. Cybernet.</maintitle>
+                           </title>
+                           <volume-nr>2</volume-nr>
+                        </series>
+                        <issue-nr>1</issue-nr>
+                        <date>2009</date>
+                     </issue>
+                     <pages>
+                        <first-page>5</first-page>
+                        <last-page>33</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0350">
+               <label>70]</label>
+               <reference id="h0350">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>G.</given-name>
+                           <surname>Waghmare</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>Comments on "A note on teaching-learning-based optimization algorithm"</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Inform. Sci.</maintitle>
+                           </title>
+                           <volume-nr>229</volume-nr>
+                        </series>
+                        <date>2013</date>
+                     </issue>
+                     <pages>
+                        <first-page>159</first-page>
+                        <last-page>169</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0355">
+               <label>71]</label>
+               <reference id="h0355">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>L.</given-name>
+                           <surname>Wang</surname>
+                        </author>
+                        <author>
+                           <given-name>Q.</given-name>
+                           <surname>Pan</surname>
+                        </author>
+                        <author>
+                           <given-name>P.N.</given-name>
+                           <surname>Suganthan</surname>
+                        </author>
+                        <author>
+                           <given-name>W.</given-name>
+                           <surname>Wang</surname>
+                        </author>
+                        <author>
+                           <given-name>Y.</given-name>
+                           <surname>Wang</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>A novel hybrid discrete differential evolution algorithm for blocking flow shop scheduling problems</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>Comput. Oper. Res.</maintitle>
+                           </title>
+                           <volume-nr>37</volume-nr>
+                        </series>
+                        <issue-nr>3</issue-nr>
+                        <date>2010</date>
+                     </issue>
+                     <pages>
+                        <first-page>509</first-page>
+                        <last-page>520</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+            <bib-reference id="b0360">
+               <label>72]</label>
+               <reference id="h0360">
+                  <contribution langtype="en">
+                     <authors>
+                        <author>
+                           <given-name>L.</given-name>
+                           <surname>Wang</surname>
+                        </author>
+                        <author>
+                           <given-name>N.</given-name>
+                           <surname>Cai</surname>
+                        </author>
+                        <author>
+                           <given-name>H.Y.</given-name>
+                           <surname>Feng</surname>
+                        </author>
+                        <author>
+                           <given-name>J.</given-name>
+                           <surname>Ma</surname>
+                        </author>
+                     </authors>
+                     <title>
+                        <maintitle>ASP: an adaptive setup planning approach for dynamic machine assignments</maintitle>
+                     </title>
+                  </contribution>
+                  <host>
+                     <issue>
+                        <series>
+                           <title>
+                              <maintitle>IEEE Trans. Autom. Sci. Eng.</maintitle>
+                           </title>
+                           <volume-nr>7</volume-nr>
+                        </series>
+                        <issue-nr>1</issue-nr>
+                        <date>2010</date>
+                     </issue>
+                     <pages>
+                        <first-page>2</first-page>
+                        <last-page>14</last-page>
+                     </pages>
+                  </host>
+               </reference>
+            </bib-reference>
+         </bibliography-sec>
+      </bibliography>
+   </tail>
+</article>
