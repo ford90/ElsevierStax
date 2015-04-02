@@ -1,4 +1,4 @@
-package com.eslevier.manager;
+package com.elsevier.manager;
 
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLStreamException;

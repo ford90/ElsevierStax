@@ -1,4 +1,4 @@
-package com.eslevier.manager;
+package com.elsevier.manager;
 
 import java.util.Stack;
 
