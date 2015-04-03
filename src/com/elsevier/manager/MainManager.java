@@ -6,11 +6,11 @@ import javax.xml.stream.events.XMLEvent;
 
 import com.elsevier.model.Article;
 
-public class MainManager implements BaseManager {
+public class MainManager extends AbstractBaseManager {
 	
 	private XMLEventReader reader;
 	private Article		   article;
-	private BaseManager	   last;
+	private IBaseManager   manager;
 	
 	public MainManager(XMLEventReader reader){
 		this.reader  = reader;
@@ -29,37 +29,34 @@ public class MainManager implements BaseManager {
 		return this.article;
 	}
 	
-	public void process(XMLEventReader reader, Article article, MainManager parent) throws XMLStreamException{
+	@Override
+	public void process(XMLEventReader reader, Article article, IBaseManager parent) throws XMLStreamException{
 		System.out.println("Inside MainManager process");
 		XMLEvent event = null;
-			while(reader.hasNext()){
-			
-				event = reader.nextEvent();
-			
-				if(event.isStartElement()){
-					if(event.asStartElement().getName().toString().equals("item-info") ){
-						ItemManager itemManager = new ItemManager();
-						itemManager.process(reader,article, this);
-						itemManager = null;
-					}
-				}
-
-				if(event.isStartElement()){
-					if(event.asStartElement().getName().toString().equals("head")){
-						HeadManager headManager = new HeadManager();
-						headManager.process(reader, article, parent);
-						headManager = null;
-					}
-				}
-				if(event.isStartElement()){
-					if(event.asStartElement().getName().toString().equals("tail")){
-						TailManager tailManager = new TailManager();
-						tailManager.process(reader, article, this);
-						tailManager = null;
-						
-					}
+		while(reader.hasNext()){
+			event = reader.nextEvent();
+			if(event.isStartElement()){
+				if(event.asStartElement().getName().toString().equals("item-info") ){
+//					ItemManager itemManager = new ItemManager();
+//					itemManager.process(reader,article, this);
+//					itemManager = null;
+					manager = new ItemManager();
+					manager.process(reader, article, this);
 				}
 			}
-	}
 
+			if(event.isStartElement()){
+				if(event.asStartElement().getName().toString().equals("head")){
+					manager = new HeadManager();
+					manager.process(reader, article, this);
+				}
+			}
+			if(event.isStartElement()){
+				if(event.asStartElement().getName().toString().equals("tail")){
+					manager = new TailManager();
+					manager.process(reader, article, this);
+				}
+			}
+		}
+	}	
 }

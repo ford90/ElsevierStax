@@ -4,4 +4,15 @@ import java.util.List;
 
 public class Tail {
 	private List<String> references;
+	
+	public void setReferences(List<String> references){
+		this.references = references;
+	}
+	
+	@Override
+	public String toString(){
+		return references.toString();
+	}
+
+	
 }

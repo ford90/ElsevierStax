@@ -17,7 +17,7 @@ import com.elsevier.model.Article;
 import com.elsevier.model.Author;
 import com.elsevier.model.Head;
 
-public class HeadManager {
+public class HeadManager extends AbstractBaseManager {
 	
 	private Stack<StartElement> stack = new Stack<StartElement>();
 	private List<Author> authors	  = new ArrayList<Author>();
@@ -29,7 +29,7 @@ public class HeadManager {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public void process(XMLEventReader reader, Article article, MainManager parent) throws XMLStreamException{
+	public void process(XMLEventReader reader, Article article, IBaseManager parent) throws XMLStreamException{
 		Head head 	= new Head();
 		String temp = null;
 		System.out.println("Inside headProcess");
@@ -38,7 +38,6 @@ public class HeadManager {
 			event = reader.nextEvent();
 			if(event.isStartElement()){
 				stack.add(event.asStartElement());
-//				System.out.println("Just added " + stack.peek().getName().toString() + " to stack");
 			}
 			
 			if(event.isStartElement()){
@@ -193,5 +192,10 @@ public class HeadManager {
 		}
 		
 	}
+
+/*	@Override
+	public void process(XMLEventReader reader, Article article, IBaseManager parent) throws XMLStreamException {
+
+	}*/
 	
 }
