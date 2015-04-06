@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.Stack;
 
 import javax.xml.stream.XMLEventReader;
@@ -135,7 +136,7 @@ public class HeadManager extends AbstractBaseManager {
 					this.stack.pop();
 				}
 				if(event.asEndElement().getName().toString().equals("head")){
-					matchAffiliations();
+					assignAffiliations();
 					head.setAuthors(authors);
 					head.setKeywords(keywords);
 					article.setHead(head);
@@ -147,12 +148,24 @@ public class HeadManager extends AbstractBaseManager {
 		
 	}
 	
-	private void matchAffiliations(){
-		for(Author author : authors){
-			for(String value: affils.keySet()){
-				String key = value.toString();
-				if(author.getId().equals(key)){
-					author.setAffiliation(affils.get(value).toString());
+	private void assignAffiliations(){
+		String key = null;
+		String affText = null;
+		if(affils.size() == 1){
+			affText = affils.entrySet().iterator().next().getValue();
+			for(Author author: authors){
+				author.setAffiliation(affText);
+				
+			}
+		}
+		else if(affils.size() > 1){
+			System.out.println("Inside affils.size > 0");
+			for(Author author : authors){
+				for(String value: affils.keySet()){
+					key = value.toString();
+					if(author.getId().equals(key)){
+						author.setAffiliation(affils.get(value).toString());
+					}
 				}
 			}
 		}

@@ -14,8 +14,9 @@ public class Head {
 		
 		if(title.contains(":")){
 			subTitle = title.substring(title.indexOf(":")+1, title.length());
+			this.title = title.substring(0, title.indexOf(":"));
 		}
-		this.title = title.substring(0, title.indexOf(":"));
+		this.title = title;
 	}
 	public String getTitle(){
 		return title;

@@ -27,7 +27,6 @@ public class TailManager extends AbstractBaseManager {
 				
 				if(event.asStartElement().getName().toString().equals("reference") && 
 						stack.get(stack.size()-2).getName().toString().equals("bib-reference") ){
-					System.out.println("reference node : ");
 					builder.append(event.toString());
 					
 					while(reader.hasNext()){
@@ -36,7 +35,6 @@ public class TailManager extends AbstractBaseManager {
 						
 						if(event.isEndElement()){
 							if(event.asEndElement().getName().toString().equals("reference")){
-								System.out.println("Break out of reference loop");
 								String reference = fixReference(builder);
 								references.add(reference);
 //								System.out.println(builder.toString());
@@ -75,6 +73,9 @@ public class TailManager extends AbstractBaseManager {
 		temp = temp.replaceAll("<name>(.*)</name>", "$1");
 		temp = temp.replaceAll("<surname>(.*?)</surname>", "$1, ");
 		temp = temp.replaceAll("<title>(.*?)</title>", "$1");
+		temp = temp.replaceAll("<doi>(.*)</doi>", "$1");
+		temp = temp.replaceAll("<edited-book>(.*?)</edited-book>", "$1");
+		temp = temp.replaceAll("<book-series>(.*?)</book-series>", "$1");
 		temp = temp.replaceAll("<book>(.*)</book>", "$1");
 		temp = temp.replaceAll("<publisher>(.*)</publisher>", "$1");
 		temp = temp.replaceAll("<maintitle>(.*?)</maintitle>", "$1:");
@@ -87,6 +88,8 @@ public class TailManager extends AbstractBaseManager {
 		temp = temp.replaceAll("<pages>(.*)</pages>", "$1");
 		temp = temp.replaceAll("<first-page>(.*)</first-page>","pp. $1-");
 		temp = temp.replaceAll("<last-page>(.*)</last-page>", "$1");
+		temp = temp.replaceAll("<comment>(.*?)</comment>", "$1");
+		temp = temp.replaceAll("<inter-ref(.*?)>(.*)</inter-ref>", "$2");
 		temp = temp.replaceAll(", . ", ". ");
 		temp = temp.replaceAll("\\s+", " ");
 		temp = temp.trim();
