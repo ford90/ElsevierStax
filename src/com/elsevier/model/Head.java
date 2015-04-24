@@ -13,8 +13,8 @@ public class Head {
 	public void setTitle(String title){
 		
 		if(title.contains(":")){
-			subTitle = title.substring(title.indexOf(":")+1, title.length());
-			this.title = title.substring(0, title.indexOf(":"));
+			this.subTitle = title.substring(title.indexOf(":")+1, title.length());
+			this.title    = title.substring(0, title.indexOf(":"));
 		}
 		this.title = title;
 	}

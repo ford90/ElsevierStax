@@ -30,6 +30,8 @@ public class Author {
 		return affiliation;
 	}
 	public void setAffiliation(String affiliation) {
+		if(affiliation.length() > 512)
+			throw new IllegalArgumentException();
 		this.affiliation = affiliation;
 	}
 	

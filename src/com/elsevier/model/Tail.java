@@ -9,6 +9,10 @@ public class Tail {
 		this.references = references;
 	}
 	
+	public List<String> getReferences(){
+		return this.references;
+	}
+	
 	@Override
 	public String toString(){
 		return references.toString();

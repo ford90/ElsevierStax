@@ -9,12 +9,16 @@ public class Item {
 		return pii;
 	}
 	public void setPii(String pii) {
+		if (pii.length()==0)
+			throw new IllegalArgumentException();
 		this.pii = pii;
 	}
 	public String getDoi() {
 		return doi;
 	}
 	public void setDoi(String doi) {
+		if (doi.length()==0)
+			throw new IllegalArgumentException();
 		this.doi = doi;
 	}
 	public String getCopyRight() {

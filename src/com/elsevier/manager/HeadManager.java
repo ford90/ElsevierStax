@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.Stack;
 
 import javax.xml.stream.XMLEventReader;
@@ -154,12 +153,10 @@ public class HeadManager extends AbstractBaseManager {
 		if(affils.size() == 1){
 			affText = affils.entrySet().iterator().next().getValue();
 			for(Author author: authors){
-				author.setAffiliation(affText);
-				
+				author.setAffiliation(affText);				
 			}
 		}
 		else if(affils.size() > 1){
-			System.out.println("Inside affils.size > 0");
 			for(Author author : authors){
 				for(String value: affils.keySet()){
 					key = value.toString();
@@ -205,10 +202,5 @@ public class HeadManager extends AbstractBaseManager {
 		}
 		
 	}
-
-/*	@Override
-	public void process(XMLEventReader reader, Article article, IBaseManager parent) throws XMLStreamException {
-
-	}*/
 	
 }

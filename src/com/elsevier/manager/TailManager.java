@@ -25,7 +25,14 @@ public class TailManager extends AbstractBaseManager {
 			if(event.isStartElement()){
 				stack.add(event.asStartElement());
 				
-				if(event.asStartElement().getName().toString().equals("reference") && 
+				/*
+				if(event.asStartElement().getName().toString().equals("other-ref")){
+					System.out.println("inside other-ref : " + 
+							stack.get(stack.size()-2).getName().toString());
+				}*/
+				
+				
+				if( (event.asStartElement().getName().toString().equals("reference") || event.asStartElement().getName().toString().equals("other-ref") ) && 
 						stack.get(stack.size()-2).getName().toString().equals("bib-reference") ){
 					builder.append(event.toString());
 					
@@ -34,7 +41,7 @@ public class TailManager extends AbstractBaseManager {
 						builder.append(event.toString());
 						
 						if(event.isEndElement()){
-							if(event.asEndElement().getName().toString().equals("reference")){
+							if(event.asEndElement().getName().toString().equals("reference") || event.asEndElement().getName().toString().equals("other-ref") ){
 								String reference = fixReference(builder);
 								references.add(reference);
 //								System.out.println(builder.toString());
@@ -89,6 +96,8 @@ public class TailManager extends AbstractBaseManager {
 		temp = temp.replaceAll("<first-page>(.*)</first-page>","pp. $1-");
 		temp = temp.replaceAll("<last-page>(.*)</last-page>", "$1");
 		temp = temp.replaceAll("<comment>(.*?)</comment>", "$1");
+		temp = temp.replaceAll("<other-ref>(.*?)</other-ref>", "$1");
+		temp = temp.replaceAll("<textref>(.*?)</textref>", "$1");
 		temp = temp.replaceAll("<inter-ref(.*?)>(.*)</inter-ref>", "$2");
 		temp = temp.replaceAll(", . ", ". ");
 		temp = temp.replaceAll("\\s+", " ");
